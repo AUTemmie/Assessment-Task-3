@@ -1,16 +1,16 @@
 # Assessment-Task-3
 <H1>Assessment Task 3</H1>
 
-<p>Objective</p>
+<H2>Objective</H2>
 <p>Designing a socially interactive learning platform that facilitates academic collaboration and resource sharing. The website should serve as a digital hub (like discord) but for topics that are related to education, promoting engagement through support from peers and study materials. 
-<p>Functional requirements</p>
+<H2>Functional requirements</H2>
 <ol>
     <li>Users should be able to create accounts and have secure login and logout processes. </li>
     <li>Users should be able to configure their personal data; avatars, biographies, usage statistics. (e.g. student IDs )</li>
     <li>Private messaging infrastructure, with real-time communication channels between users. (Private and public study groups)</li>
     <li>Find peers studying similar subjects, and groups or people who have the same interests.</li>
 </ol>
-<p>Non-Functional requirements</p>
+<H2>Non-Functional requirements</H2>
 <ol>
     <li>Consistency aesthetically pleasing elements (color, typography, spacing). Should have a high contrast readability. </li>
     <li>Streamlined and intuitive navigation structure. Should be easy for our age groups (Middle school to Uni) to use and access.  </li>
