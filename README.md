@@ -19,6 +19,6 @@
 
 | Changing Element | Description |
 | ----------- | ----------- |
-| Colour Palette |  |
+| Colour Palette | ![Colours](Colours.png) |
 | Typography | Instrumental Sans |
 | Image/Icon Choice | Using AI or web images |
