@@ -16,3 +16,8 @@
     <li>Streamlined and intuitive navigation structure. Should be easy for our age groups (Middle school to Uni) to use and access.  </li>
     <li>Cloud-based scalability to support increasing user loads. This minimizes crashes and makes sure the website doesn't slow down as more students and other members of community continue to access our website. </li>
 </ol>
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
