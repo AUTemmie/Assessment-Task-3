@@ -17,7 +17,8 @@
     <li>Cloud-based scalability to support increasing user loads. This minimizes crashes and makes sure the website doesn't slow down as more students and other members of community continue to access our website. </li>
 </ol>
 
-| Syntax | Description |
+| Changing Element | Description |
 | ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Colour Palette |  |
+| Typography | Instrumental Sans |
+| Image/Icon Choice | Using AI or web images |
