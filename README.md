@@ -19,6 +19,6 @@
 
 | Changing Element | Description |
 | ----------- | ----------- |
-| Colour Palette | ![Colours](Colours.png) |
+| Colour Palette | ![Colours](c:\Users\lucas\Downloads\Colours.png) |
 | Typography | Instrumental Sans |
 | Image/Icon Choice | Using AI or web images |
