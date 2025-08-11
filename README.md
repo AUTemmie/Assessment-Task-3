@@ -34,6 +34,8 @@ Colours will be based off of Jeff Koons: Moon Phases as shown below.
 
 ![Alt text](Colours.png)
 
+---
+
 <H1>Design Prototype 1</H1>
 <H2>Login Page</H2>
 <p>Displays 3 interactive buttons to sign in; may change to just a sign up page for easier navigation and less workload.
@@ -56,20 +58,20 @@ Notifications: Non-interactive. If too much workload may not include.
 <p>Once you click on someone in DMs, you will be directed to this page.
 
 Shows:
-people.
-Activity.
+ - people.
+ - Activity.
 
 Interactions:
-Communication. 
+ - Communication. 
 
 Still shows quick links for easy access. 
 </p>
 <H2>Profile Page</H2>
 <p>Customise user settings:
-Picture
-Username
-Phone Number
-Email
+1. Picture
+2. Username
+3. Phone Number
+4. Email
 
 Those buttons like “privacy and safety” are non-functional requirements. 
 
