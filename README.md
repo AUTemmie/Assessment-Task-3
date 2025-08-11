@@ -22,3 +22,5 @@
 | Colour Palette | The colours  |
 | Typography | Instrumental Sans |
 | Image/Icon Choice | Using AI or web images |
+
+![Alt text](Colours.png)
