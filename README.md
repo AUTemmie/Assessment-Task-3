@@ -43,6 +43,7 @@ Colours will be based off of Jeff Koons: Moon Phases as shown below.
 Branding is clearly evident on top left and right side of page; colour scheme for branding is questionable; definite change in the future using AI.
 
 Design is a little simplistic, may include gradient-forms or different designs; still unknown. </p>
+![Alt text](LoginPage.png)
 <H2>Home Page</H2>
 <p>Once you sign in, you will be redirected to this page. 
 
@@ -54,6 +55,7 @@ Shows current friends and friends you can add; Interactive elements when you cli
 
 Notifications: Non-interactive. If too much workload may not include. 
 </p>
+![Alt text](HomePage.png)
 <H2>Direct Messages Page</H2>
 <p>Once you click on someone in DMs, you will be directed to this page.
 
@@ -66,6 +68,7 @@ Interactions:
 
 Still shows quick links for easy access. 
 </p>
+![Alt text](DMPage.png)
 <H2>Profile Page</H2>
 <p>Customise user settings:
 1. Picture
@@ -79,3 +82,4 @@ Quick links are still here.
 
 Logout will send you back to the login page. 
 </p>
+![Alt text](ProfilePage.png)
