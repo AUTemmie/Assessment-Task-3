@@ -19,8 +19,15 @@
 
 | Changing Element | Description |
 | ----------- | ----------- |
-| Colour Palette | The colours  |
 | Typography | Instrumental Sans |
 | Image/Icon Choice | Using AI or web images |
 
+Colours will be based off of Jeff Koons: Moon Phases as shown below.
+| Hex Code | Purpose |
+|#212A31 | background colours | 
+|#2E3944 | outlines and background colours | 
+|#124E66 | more vibrant sections | 
+|#748D92 | design and text |
+|#D3D9D4 | text |
+|#FFFFFF | text |
 ![Alt text](Colours.png)
