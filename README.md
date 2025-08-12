@@ -88,3 +88,6 @@ Logout will send you back to the login page.
 </p>
 
 ![alt text](image-3.png)
+---
+
+<H1>Design Prototype 2</H1>
