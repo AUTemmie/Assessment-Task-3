@@ -58,6 +58,7 @@ Notifications: Non-interactive. If too much workload may not include.
 </p>
 
 ![Alt text](HomePage.png)
+
 <H2>Direct Messages Page</H2>
 <p>Once you click on someone in DMs, you will be directed to this page.
 
