@@ -44,7 +44,7 @@ Branding is clearly evident on top left and right side of page; colour scheme fo
 
 Design is a little simplistic, may include gradient-forms or different designs; still unknown. </p>
 
-![alt text](image-1.png)
+![alt text](images/LoginPage.png)
 <H2>Home Page</H2>
 <p>Once you sign in, you will be redirected to this page. 
 
@@ -57,7 +57,7 @@ Shows current friends and friends you can add; Interactive elements when you cli
 Notifications: Non-interactive. If too much workload may not include. 
 </p>
 
-![alt text](image-2.png)
+![alt text](images/HomePage.png)
 
 <H2>Direct Messages Page</H2>
 <p>Once you click on someone in DMs, you will be directed to this page.
@@ -72,7 +72,7 @@ Interactions:
 Still shows quick links for easy access. 
 </p>
 
-![alt text](image.png)
+![alt text](images/DMPage.png)
 <H2>Profile Page</H2>
 <p>Customise user settings:
 1. Picture
@@ -87,7 +87,7 @@ Quick links are still here.
 Logout will send you back to the login page. 
 </p>
 
-![alt text](image-3.png)
+![alt text](images/ProfilePage.png)
 ---
 
 <H1>Design Prototype 2</H1>
