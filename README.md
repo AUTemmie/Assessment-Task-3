@@ -87,4 +87,4 @@ Quick links are still here.
 Logout will send you back to the login page. 
 </p>
 
-![Alt text](image-3.png)
+![alt text](image-3.png)
