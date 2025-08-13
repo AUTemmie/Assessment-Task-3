@@ -103,16 +103,19 @@ Logout will send you back to the login page.
 <H1>Design Prototype 2</H1>
 
 <h2>LoginPage</h2>
-<p></p>
+
+<p>Changed the login page to look a lot more minimalistic and formal. Looks more pleasing to the eye than original design as original design looked very boring and rather goofy.</p>
 
 ![alt text](images/1.png)
 
 <h2>DashboardPage</h2>
-<p></p>
+
+<p>The idea of the dashboard was to move away from an inherently different version of discord to a more original concept and idea of a study social network. The Minopus dashboard is designed to allocate resources to how much learning is done rather than just communication with friends and people. </p>
 
 ![alt text](images/2.png)
 
 <h2>DMPage</h2>
-<p></p>
+
+<p>DM page remains relatively similar apart from the adition of the sidebar, which not only is a minimalistic look but also a very simple navigation tool that will allow users to move around the application freely. Most communication bits will remain the same as they have a nice look but also don't stray from what I plan to do. </p>
 
 ![alt text](images/3.png)
