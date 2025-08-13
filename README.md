@@ -2,7 +2,9 @@
 <H1>Assessment Task 3</H1>
 
 <H2>Objective</H2>
+
 <p>Designing a socially interactive learning platform that facilitates academic collaboration and resource sharing. The website should serve as a digital hub (like discord) but for topics that are related to education, promoting engagement through support from peers and study materials. 
+
 <H2>Functional requirements</H2>
 <ol>
     <li>Users should be able to create accounts and have secure login and logout processes. </li>
@@ -10,6 +12,7 @@
     <li>Private messaging infrastructure, with real-time communication channels between users. (Private and public study groups)</li>
     <li>Find peers studying similar subjects, and groups or people who have the same interests.</li>
 </ol>
+
 <H2>Non-Functional requirements</H2>
 <ol>
     <li>Consistency aesthetically pleasing elements (color, typography, spacing). Should have a high contrast readability. </li>
@@ -17,10 +20,12 @@
     <li>Cloud-based scalability to support increasing user loads. This minimizes crashes and makes sure the website doesn't slow down as more students and other members of community continue to access our website. </li>
 </ol>
 
+
 | Changing Element | Description |
 | ----------- | ----------- |
 | Typography | Instrumental Sans |
 | Image/Icon Choice | Using AI or web images |
+
 
 Colours will be based off of Jeff Koons: Moon Phases as shown below.
 | Hex Code | Purpose |
@@ -34,9 +39,11 @@ Colours will be based off of Jeff Koons: Moon Phases as shown below.
 
 ![Alt text](Colours.png)
 
+
 ---
 
 <H1>Design Prototype 1</H1>
+
 <H2>Login Page</H2>
 <p>Displays 3 interactive buttons to sign in; may change to just a sign up page for easier navigation and less workload.
 
@@ -45,6 +52,7 @@ Branding is clearly evident on top left and right side of page; colour scheme fo
 Design is a little simplistic, may include gradient-forms or different designs; still unknown. </p>
 
 ![alt text](images/LoginPage.png)
+
 <H2>Home Page</H2>
 <p>Once you sign in, you will be redirected to this page. 
 
@@ -73,6 +81,7 @@ Still shows quick links for easy access.
 </p>
 
 ![alt text](images/DMPage.png)
+
 <H2>Profile Page</H2>
 <p>Customise user settings:
 1. Picture
@@ -88,6 +97,7 @@ Logout will send you back to the login page.
 </p>
 
 ![alt text](images/ProfilePage.png)
+
 ---
 
 <H1>Design Prototype 2</H1>
