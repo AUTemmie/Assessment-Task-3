@@ -98,9 +98,11 @@ Logout will send you back to the login page.
 
 ![alt text](images/ProfilePage.png)
 
-<p>
+<h2>Wireframe</h2>
 
-</p>
+<p>This essentially shows where each page can be directed to. </p>
+
+![alt text](images/Wireframe.png)
 
 <H1>Design Prototype 2</H1>
 
