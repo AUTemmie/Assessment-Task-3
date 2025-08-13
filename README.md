@@ -99,6 +99,7 @@ Logout will send you back to the login page.
 ![alt text](images/ProfilePage.png)
 
 <p>
+
 </p>
 
 <H1>Design Prototype 2</H1>
