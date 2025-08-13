@@ -93,5 +93,16 @@ Logout will send you back to the login page.
 <H1>Design Prototype 2</H1>
 
 <h2>LoginPage</h2>
+<p></p>
+
+![alt text](images/1.png)
+
 <h2>DashboardPage</h2>
+<p></p>
+
+![alt text](images/2.png)
+
 <h2>DMPage</h2>
+<p></p>
+
+![alt text](images/3.png)
