@@ -123,3 +123,51 @@ Logout will send you back to the login page.
 <p>DM page remains relatively similar apart from the adition of the sidebar, which not only is a minimalistic look but also a very simple navigation tool that will allow users to move around the application freely. Most communication bits will remain the same as they have a nice look but also don't stray from what I plan to do. </p>
 
 ![alt text](images/3.png)
+
+<h1>Test Cases</h1>
+
+<h2>Test Case 1</h2>
+
+<p>Test case ID: TC1
+Test Case Name: Successful user Login
+Preconditions: User must already have an account.
+Test Steps:
+ 1. Enter page.
+ 2. Enter username/email and password details correctly.
+ 3. Click Login Button.
+ 
+Expected Result: The user is able to login and will be directed to the "Dashboad" Page.</p>
+
+<h2>Test Case 2</h2>
+<p>Test case name ID: TC2
+Test Case Name: Unsuccessful user Login
+Preconditions: User must already have an account. 
+Test Steps:
+ 1. Enter Page.
+ 2. Enter username/email correctly and paswword details incorrectly.
+ 3. Click Login Button.
+ 4. Message "Wrong username/email and password details".
+ 5. Enter username/email incorrectly and paswword details correctly.
+ 6. Message "Wrong username/email and password details".
+ 7. Click Login Button.
+
+Expected Result: The user would be unable to login as his details are incorrect. </p>
+
+<h2>Test Case 3</h2>
+<p> Test Case name ID: TC3
+Test Case Name: Successful user Signup
+Preconditions: User must not already have an account.
+Test Steps:
+ 1. Enter Page. 
+ 2. Click Signup Button. 
+ 3. Enter real details.
+ 4. Redirected to Login page, where you login with details that you signed up with.
+ 5. Click Login Button. 
+
+Expected Result: The user is able to successfuly create an account, and login once the account is created. </p>
+ 
+<h2>Login and Signup Algorithm</h2>
+<p>Use this image to help you understand test cases above.</p>
+
+![alt text](images/Algorithm.png)
+
