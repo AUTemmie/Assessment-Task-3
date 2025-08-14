@@ -132,9 +132,11 @@ Logout will send you back to the login page.
 Test Case Name: Successful user Login
 Preconditions: User must already have an account.
 Test Steps:
- 1. Enter page.
- 2. Enter username/email and password details correctly.
- 3. Click Login Button.
+<ol>
+ <li>Enter page.</li>
+ <li>Enter username/email and password details correctly.</li>
+ <li>Click Login Button.</li>
+ </ol>
  
 Expected Result: The user is able to login and will be directed to the "Dashboad" Page.</p>
 
@@ -143,14 +145,15 @@ Expected Result: The user is able to login and will be directed to the "Dashboad
 Test Case Name: Unsuccessful user Login
 Preconditions: User must already have an account. 
 Test Steps:
- 1. Enter Page.
- 2. Enter username/email correctly and paswword details incorrectly.
- 3. Click Login Button.
- 4. Message "Wrong username/email and password details".
- 5. Enter username/email incorrectly and paswword details correctly.
- 6. Message "Wrong username/email and password details".
- 7. Click Login Button.
-
+<ol>
+ <li>Enter Page.</li>
+ <li>Enter username/email correctly and paswword details incorrectly. </li>
+ <li>Click Login Button. </li>
+ <li>Message "Wrong username/email and password details". </li>
+ <li>Enter username/email incorrectly and paswword details correctly. </li>
+ <li>Message "Wrong username/email and password details". </li>
+ <li>Click Login Button. </li>
+</ol>
 Expected Result: The user would be unable to login as his details are incorrect. </p>
 
 <h2>Test Case 3</h2>
@@ -158,11 +161,13 @@ Expected Result: The user would be unable to login as his details are incorrect.
 Test Case Name: Successful user Signup
 Preconditions: User must not already have an account.
 Test Steps:
- 1. Enter Page. 
- 2. Click Signup Button. 
- 3. Enter real details.
- 4. Redirected to Login page, where you login with details that you signed up with.
- 5. Click Login Button. 
+<ol>
+ <li>Enter Page. </li>
+ <li>Click Signup Button. </li>
+ <li>Enter real details. </li>
+ <li>Redirected to Login page, where you login with details that you signed up with. </li>
+ <li>Click Login Button. <li>
+</ol>
 
 Expected Result: The user is able to successfuly create an account, and login once the account is created. </p>
  
