@@ -4,12 +4,12 @@ import os
 
 class DBManager:
     def __init__(self):
-        self.dbPath = os.path.join(os.getcwd(), 'database', 'data_source.db')
+        self.dbPath = os.path.join(os.getcwd(), "database", "data_source.db")
 
 
 def listExtension():
     con = sql.connect("database/data_source.db")
     cur = con.cursor()
-    data = cur.execute('SELECT * FROM extension').fetchall()
+    data = cur.execute("SELECT * FROM extension").fetchall()
     con.close()
     return data
