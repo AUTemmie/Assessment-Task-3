@@ -1,0 +1,36 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="chat-container">
+  <h2>Chats</h2>
+
+  <!-- Messages -->
+  <div class="chat-box">
+    <div class="message received">
+      <p>Tim u r a stupid peepeepoopoo</p>
+      <span class="time"> 16 trillion AM</span>
+    </div>
+    <div class="message sent">
+      <p>sigma sigma boy</p>
+      <span class="time">17 trillion AM</span>
+    </div>
+    <div class="message received">
+      <p>ur mum</p>
+      <span class="time">18 trillion AM</span>
+    </div>
+    <div class="message sent">
+      <p>ur dad</p>
+      <span class="time">19 trillion AM</span>
+    </div>
+  </div>
+
+  <!-- Input -->
+  <form class="chat-input" method="post" action="/send_message">
+    <input
+      type="text"
+      name="message"
+      placeholder="Type a message..."
+      required
+    />
+    <button type="submit">Send</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+-- database: ./data_source.db
+
+SELECT * FROM Conversation;
+
+SELECT * 
+FROM Users
+WHERE email LIKE '%@gmail.com';
+SELECT * 
+FROM Users
+WHERE LENGTH(Password) > 5;
+
+SELECT * 
+FROM Conversation
+WHERE User_ID = 47;  -- Replace with actual User_ID
+
+SELECT * 
+FROM Conversation
+WHERE Message_sent_date = 7/01/2025;
+
+SELECT * 
+FROM Conversation
+WHERE message_text LIKE '%lorem%';
