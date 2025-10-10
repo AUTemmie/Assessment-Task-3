@@ -1,0 +1,404 @@
+/* Reset + Base */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #eef2f5;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr 300px;
+  grid-template-rows: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  background: linear-gradient(180deg, #224e5f, #183441);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 12px 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Main Panel */
+.main-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #eef2f5;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main-panel h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.main-panel h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #4d6273;
+}
+
+/* Welcome Card */
+.welcome-card {
+  background: linear-gradient(135deg, #ffffff, #f9fbfc);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-card h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.card h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.card li {
+  margin-bottom: 10px;
+  background: #f7f9fa;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #34495e;
+}
+
+/* Notifications */
+.notifications {
+  background: #fafbfc;
+  padding: 25px;
+  border-left: 1px solid #e0e4e7;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.notifications h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notifications li {
+  margin-bottom: 15px;
+  background: #fff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.notifications li:hover {
+  transform: translateY(-3px);
+}
+
+.notifications span {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #224e5f;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 15px;
+}
+
+.message {
+  max-width: 70%;
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  position: relative;
+}
+
+.message.sent {
+  background: #224e5f;
+  color: #fff;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.message.received {
+  background: #f1f3f5;
+  color: #2c3e50;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.message .time {
+  display: block;
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.chat-input button {
+  background: #224e5f;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.chat-input button:hover {
+  background: #1a3b48;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #224e5f;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #224e5f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button[type="submit"]:hover {
+  background: #1a3b48;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.signup-link a {
+  color: #224e5f;
+  text-decoration: none;
+  font-weight: 500;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Hide sidebars when layout is disabled */
+body.no-sidebars .dashboard-grid {
+  grid-template-columns: 1fr; /* Collapse to single column */
+}
+
+body.no-sidebars .sidebar,
+body.no-sidebars .notifications {
+  display: none !important;
+}
+
+.friends-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.friend {
+  background: #fff;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-icon {
+  font-size: 18px;
+}
+
+.friend .status {
+  float: right;
+  font-weight: bold;
+}
+
+.friend.online .status {
+  color: #2ecc71; /* green */
+}
+
+.friend.offline .status {
+  color: #e74c3c; /* red */
+}
+
+/* Status icons (Discord-style) */
+.status-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  border: 2px solid #fff; /* small white border around circle */
+}
+
+.friend.online .status-icon {
+  background-color: #43b581; /* Discord green */
+}
+
+.friend.offline .status-icon {
+  background-color: #747f8d; /* Discord grey */
+}

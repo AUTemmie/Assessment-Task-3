@@ -1,0 +1,34 @@
+<div class="card">
+  <h3>Friends</h3>
+  <ul class="friends-list">
+    <li class="friend online">
+      <div class="avatar-wrapper">
+        <img
+          class="avatar"
+          src="{{ url_for('static', filename='images/ava_lin.png') }}"
+          alt="Ava Lin"
+        />
+        <span class="status-icon"></span>
+      </div>
+      <div class="friend-info">
+        <strong>Ava Lin</strong>
+        <p>Exploring space documentaries 🌌</p>
+      </div>
+    </li>
+
+    <li class="friend offline">
+      <div class="avatar-wrapper">
+        <img
+          class="avatar"
+          src="{{ url_for('static', filename='images/rafi_torres.png') }}"
+          alt="Rafi Torres"
+        />
+        <span class="status-icon"></span>
+      </div>
+      <div class="friend-info">
+        <strong>Rafi Torres</strong>
+        <p>Grinding ranked matches in Apex Legends 🎮</p>
+      </div>
+    </li>
+  </ul>
+</div>

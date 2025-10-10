@@ -1,0 +1,67 @@
+{% extends 'layout.html' %} {% block content %}
+
+<h2>Friends</h2>
+
+<div class="card">
+  <h3>Friends</h3>
+
+  <!-- Search Bar -->
+  <input
+    type="text"
+    id="friend-search"
+    placeholder="Search friends..."
+    class="friend-search"
+  />
+
+  <ul class="friends-list" id="friends-list">
+    <li class="friend online">
+      <span class="status-icon"></span>
+      <strong>Rishit Prasad</strong>
+      <p>Stinking up the room</p>
+    </li>
+    <li class="friend online">
+      <span class="status-icon"></span>
+      <strong>Sebastion Kameron</strong>
+      <p>Playing plague inc in class</p>
+    </li>
+    <li class="friend online">
+      <span class="status-icon"></span>
+      <strong>David Koh</strong>
+      <p>Working at mcdonalds</p>
+    </li>
+    <li class="friend offline">
+      <span class="status-icon"></span>
+      <strong>Rishits Father</strong>
+      <p>Doesn't exist; left</p>
+    </li>
+    <li class="friend offline">
+      <span class="status-icon"></span>
+      <strong>Nia Kapoor</strong>
+      <p>Curating a lo-fi playlist</p>
+    </li>
+  </ul>
+</div>
+
+<!-- Search Script -->
+<script>
+  const searchInput = document.getElementById("friend-search");
+  const friendsList = document.getElementById("friends-list");
+  const friends = friendsList.getElementsByClassName("friend");
+
+  searchInput.addEventListener("input", function () {
+    const filter = searchInput.value.toLowerCase();
+
+    Array.from(friends).forEach((friend) => {
+      const name = friend.querySelector("strong").textContent.toLowerCase();
+      const status = friend.querySelector("p").textContent.toLowerCase();
+
+      if (name.includes(filter) || status.includes(filter)) {
+        friend.style.display = "flex"; // show
+      } else {
+        friend.style.display = "none"; // hide
+      }
+    });
+  });
+</script>
+
+{% endblock %}

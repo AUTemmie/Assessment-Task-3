@@ -1,0 +1,46 @@
+{% extends 'layout.html' %} {% block content %}
+
+<main class="settings-page">
+  <h2 class="page-title">Settings</h2>
+
+  <div class="dashboard-grid">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-section">
+        <div class="avatar"></div>
+        <p class="username">John Doe</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#">Profile</a>
+        <a href="#">Account</a>
+        <a href="#">Privacy</a>
+        <a href="{{ url_for('logout') }}" class="logout">Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main settings content -->
+    <section class="settings-content">
+      <h3>Account Preferences</h3>
+      <form class="settings-form">
+        <label>
+          Username
+          <input type="text" name="username" value="JohnDoe123" />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" value="john@example.com" />
+        </label>
+
+        <label>
+          Password
+          <input type="password" name="password" placeholder="********" />
+        </label>
+
+        <button type="submit" class="save-btn">Save Changes</button>
+      </form>
+    </section>
+  </div>
+</main>
+
+{% endblock %}

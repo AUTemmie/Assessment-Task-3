@@ -1,0 +1,32 @@
+<aside class="notifications" aria-label="User Notifications">
+  <h2>Notifications</h2>
+  <ul class="notification-list">
+    {% for note in notifications %}
+    <li>
+      {% if note.type == 'friend_request' %}
+      <span class="icon">👤</span>
+      <span class="text"> {{ note.from_user }} sent you a friend request </span>
+      <!-- Link to friends page or accept request -->
+      <a href="{{ url_for('friends_page') }}?user_id={{ note.from_user_id }}"
+        >View Profile</a
+      >
+      <a href="{{ url_for('accept_friend', friend_id=note.from_user_id) }}"
+        >Accept</a
+      >
+      {% elif note.type == 'music' %}
+      <span class="icon">🎵</span>
+      <span class="text">{{ note.from_user }} is listening to music</span>
+      {% elif note.type == 'game' %}
+      <span class="icon">🎮</span>
+      <span class="text"
+        >{{ note.from_user }} is playing {{ note.game_name }}</span
+      >
+      {% elif note.type == 'message' %}
+      <span class="icon">💬</span>
+      <span class="text">{{ note.from_user }} has sent you a message</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <footer class="timestamp">Today {{ current_time }}</footer>
+</aside>

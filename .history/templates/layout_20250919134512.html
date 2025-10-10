@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/Favicon.png') }}"
+    />
+    <title>{% block title %}Minopus{% endblock %}</title>
+  </head>
+  <body class="theme-red {% if hide_layout %}no-sidebars{% endif %}">
+    <div class="dashboard-grid">
+      {% if not hide_layout %}
+      <!-- Left Sidebar -->
+      {% include "partials/sidebar.html" %} {% endif %}
+
+      <!-- Main Content -->
+      <main class="main-panel">{% block content %}{% endblock %}</main>
+
+      {% if not hide_layout %}
+      <!-- Right Sidebar -->
+      {% include "partials/notifications.html" %} {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>

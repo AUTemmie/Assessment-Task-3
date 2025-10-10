@@ -1,0 +1,30 @@
+{% extends 'layout.html' %} {% block content %}
+
+<main class="settings-page">
+  <h2 class="page-title">Settings</h2>
+
+  <section class="settings-content">
+    <h3>Account Preferences</h3>
+    <form class="settings-form">
+      <label>
+        Username
+        <input type="text" name="username" value="JohnDoe123" />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" value="john@example.com" />
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="password" placeholder="********" />
+      </label>
+
+      <button type="submit" class="save-btn">Save Changes</button>
+    </form>
+  </section>
+  <a href="Login"></a>
+</main>
+
+{% endblock %}
