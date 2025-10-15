@@ -631,102 +631,25 @@ button[type="submit"]:hover {
   background-color: #254b57;
 }
 
-/* === Signup-only overrides (place at end of CSS file) === */
-/* These are explicitly scoped to .signup-page so they won't affect other pages. */
-
-.signup-page {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  min-height: 100vh;
-  padding: 6vh 1rem;
-  background-color: #eef2f5; /* keeps page bg consistent */
-  box-sizing: border-box;
-}
-
-/* The form box itself */
-.signup-page .signup-form {
-  width: 100%;
-  max-width: 420px;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
-  margin: 0; /* ensure it's centered by flex parent */
-}
-
-/* Page title INSIDE the form so it's centered with the box */
-.signup-page .page-title {
-  margin: 0 0 1.25rem;
+.signup-link {
   text-align: center;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.signup-link a {
   color: #1e3a46;
-  font-weight: 700;
-  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-/* Form fields */
-.signup-page .signup-form label {
-  display: block;
-  margin-bottom: 0.9rem;
-  font-size: 0.95rem;
-  color: #34495e;
-  font-weight: 600;
+.signup-link a:hover {
+  text-decoration: underline;
 }
 
-.signup-page .signup-form input[type="text"],
-.signup-page .signup-form input[type="email"],
-.signup-page .signup-form input[type="password"] {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #dcdde1;
-  border-radius: 8px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.signup-page .signup-form input:focus {
-  border-color: #224e5f;
-  outline: none;
-  box-shadow: 0 0 6px rgba(34, 78, 95, 0.12);
-}
-
-/* Submit button */
-.signup-page .signup-form button[type="submit"] {
-  width: 100%;
-  padding: 0.85rem;
-  margin-top: 0.5rem;
-  background-color: #224e5f;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s ease;
-}
-
-.signup-page .signup-form button[type="submit"]:hover {
-  background-color: #183441;
-}
-
-/* Message / error text (matches earlier .error but scoped) */
-.signup-page .signup-form p[style],
-.signup-page .signup-form .error {
-  color: #d9534f !important;
+.error {
+  color: #d9534f;
   text-align: center;
-  margin-top: 0.75rem;
-  font-weight: 600;
-}
-
-/* Small responsive tweak */
-@media (max-width: 480px) {
-  .signup-page .signup-form {
-    padding: 1.25rem;
-    border-radius: 10px;
-  }
-
-  .signup-page .page-title {
-    font-size: 1.15rem;
-  }
+  margin-bottom: 1rem;
+  font-weight: 500;
 }

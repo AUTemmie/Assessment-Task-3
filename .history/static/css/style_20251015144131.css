@@ -1,0 +1,201 @@
+/* === RESET & BASE === */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #eef2f5;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+/* === DASHBOARD GRID === */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr 300px;
+  grid-template-rows: 100vh;
+  overflow: hidden;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  background: linear-gradient(180deg, #224e5f, #183441);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 12px 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* === MAIN PANEL === */
+.main-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #eef2f5;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main-panel h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* === HIDE SIDE BARS (LOGIN/SIGNUP) === */
+body.no-sidebars .dashboard-grid {
+  grid-template-columns: 1fr;
+}
+
+body.no-sidebars .sidebar,
+body.no-sidebars .notifications {
+  display: none !important;
+}
+
+/* === LOGIN & SIGNUP SHARED STYLES === */
+.auth-container {
+  max-width: 400px;
+  margin: 8vh auto;
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1e3a46;
+  font-weight: 600;
+}
+
+.form-group,
+.signup-form label {
+  display: block;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.signup-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.signup-form input:focus {
+  border-color: #1e3a46;
+  outline: none;
+}
+
+/* === BUTTON === */
+button[type="submit"],
+.signup-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #1e3a46;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+.signup-form button:hover {
+  background-color: #254b57;
+}
+
+/* === ERROR MESSAGE === */
+.error,
+.signup-page p[style*="color: red"] {
+  color: #d9534f !important;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* === SIGNUP PAGE SPECIFIC === */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eef2f5;
+}
+
+.signup-form {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-page .page-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1e3a46;
+  font-weight: 600;
+}
+
+/* === LOGIN / SIGNUP LINK === */
+.signup-link {
+  text-align: center;
+  margin-top: 1rem;
+  color: #333;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #1e3a46;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

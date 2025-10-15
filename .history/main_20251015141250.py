@@ -14,7 +14,6 @@ db = dbHandler.DBManager()
 def signup():
     if request.method == "POST":
         first_name = request.form["first_name"]
-        email = request.form["email"]
         password = request.form["password"]
 
         # Check if user exists
@@ -26,15 +25,20 @@ def signup():
         con = sql.connect(db.dbPath)
         cur = con.cursor()
         cur.execute(
-            "INSERT INTO users (first_name, email, password) VALUES (?, ?, ?)",
-            (first_name, email, password),
+            "INSERT INTO users (first_name, password) VALUES (?, ?)",
+            (first_name, password),
         )
         con.commit()
         con.close()
 
         return redirect(url_for("login"))
 
-    return render_template("signup.html", hide_layout=True)
+    return render_template(
+        "signup.html",
+    )
+
+
+db._create_messages_table()
 
 
 @app.context_processor

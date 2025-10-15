@@ -3,7 +3,7 @@
   <h2>Chats</h2>
 
   <!-- Messages -->
-  <div class="chat-box" id="chatBox">
+  <div class="chat-box">
     {% for sender, text, time in messages %}
     <div
       class="message {% if sender == session['username'] %}sent{% else %}received{% endif %}"
@@ -24,18 +24,8 @@
       name="message"
       placeholder="Type a message..."
       required
-      autocomplete="off"
     />
     <button type="submit">Send</button>
   </form>
 </div>
-
-<!-- Auto-scroll script -->
-<script>
-  // Always scroll chat to bottom after page load
-  const chatBox = document.getElementById("chatBox");
-  if (chatBox) {
-    chatBox.scrollTop = chatBox.scrollHeight;
-  }
-</script>
 {% endblock %}

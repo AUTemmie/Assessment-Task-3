@@ -1,0 +1,28 @@
+{% extends "layout.html" %} {% block content %}
+<main class="signup-page">
+  <form method="POST" action="/signup" class="signup-form">
+    <h2 class="page-title">Sign Up</h2>
+
+    <label>
+      Username
+      <input type="text" name="first_name" required />
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required />
+    </label>
+
+    <label>
+      Password
+      <input type="password" name="password" required />
+    </label>
+
+    <button type="submit">Create Account</button>
+
+    {% if message %}
+    <p style="color: red">{{ message }}</p>
+    {% endif %}
+  </form>
+</main>
+{% endblock %}
