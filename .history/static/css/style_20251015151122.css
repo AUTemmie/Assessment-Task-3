@@ -631,16 +631,20 @@ button[type="submit"]:hover {
   background-color: #254b57;
 }
 
+/* === Signup-only overrides (place at end of CSS file) === */
+/* These are explicitly scoped to .signup-page so they won't affect other pages. */
+
 .signup-page {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   min-height: 100vh;
   padding: 6vh 1rem;
-  background-color: #eef2f5;
+  background-color: #eef2f5; /* keeps page bg consistent */
   box-sizing: border-box;
 }
 
+/* The form box itself */
 .signup-page .signup-form {
   width: 100%;
   max-width: 420px;

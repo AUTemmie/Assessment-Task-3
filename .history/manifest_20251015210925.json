@@ -1,6 +1,6 @@
 {
   "name": "Minopus",
-  "short_name": "MPS",
+  "short_name": "vscodeextcat",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fdfdfd",
