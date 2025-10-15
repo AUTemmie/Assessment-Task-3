@@ -12,26 +12,6 @@ db = dbHandler.DBManager()
 db._create_messages_table()
 
 
-@app.context_processor
-def inject_notifications():
-    friends = [
-        {"id": 1, "name": "Rishit Prasad", "description": "Stinking up the room"},
-        {
-            "id": 2,
-            "name": "Sebastion Kameron",
-            "description": "Playing plague inc in class",
-        },
-        {"id": 3, "name": "David Koh", "description": "Working at mcdonalds"},
-    ]
-
-    current_time = datetime.now().strftime("%I:%M %p")
-
-    return dict(
-        friends=friends,
-        current_time=current_time,
-    )
-
-
 @app.route("/", methods=["GET"])
 @app.route("/index.html", methods=["GET"])
 def index():
@@ -75,7 +55,27 @@ def send_message():
 def friends_page():
     if "username" not in session:
         return redirect("/Login")
-    return render_template("friends.html")
+
+    # Example friends data
+    friends = [
+        {"id": 1, "name": "Rishit Prasad", "description": "Stinking up the room"},
+        {
+            "id": 2,
+            "name": "Sebastion Kameron",
+            "description": "Playing plague inc in class",
+        },
+        {"id": 3, "name": "David Koh", "description": "Working at mcdonalds"},
+        {"id": 4, "name": "Rishits Father", "description": "Gone"},
+        {"id": 5, "name": "Nia Kapoor", "description": "Curating a lo-fi playlist"},
+    ]
+
+    current_time = datetime.now().strftime("%I:%M %p")
+
+    return render_template(
+        "friends.html",
+        friends=friends,
+        current_time=current_time,
+    )
 
 
 @app.route("/resources")

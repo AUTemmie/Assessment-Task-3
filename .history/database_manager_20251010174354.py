@@ -25,7 +25,9 @@ class DBManager:
             return {"first_name": row[0], "password": row[1]}
         return None
 
-    # CHAT SYSTEM
+    # ======================
+    # 🟩 CHAT SYSTEM METHODS
+    # ======================
 
     def _create_messages_table(self):
         """Creates a messages table if it doesn't exist."""

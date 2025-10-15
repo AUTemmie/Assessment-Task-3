@@ -25,7 +25,9 @@ class DBManager:
             return {"first_name": row[0], "password": row[1]}
         return None
 
-    # CHAT SYSTEM
+    # ======================
+    # 🟩 CHAT SYSTEM METHODS
+    # ======================
 
     def _create_messages_table(self):
         """Creates a messages table if it doesn't exist."""
@@ -57,9 +59,4 @@ class DBManager:
 
     def get_messages(self):
         """Fetch all messages."""
-        con = sql.connect(self.dbPath)
-        cur = con.cursor()
-        cur.execute("SELECT sender, text, time FROM messages ORDER BY id ASC")
-        rows = cur.fetchall()
-        con.close()
-        return rows
+        con = sql.

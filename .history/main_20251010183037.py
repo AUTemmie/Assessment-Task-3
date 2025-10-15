@@ -14,6 +14,7 @@ db._create_messages_table()
 
 @app.context_processor
 def inject_notifications():
+    # Example data; replace with database queries later
     friends = [
         {"id": 1, "name": "Rishit Prasad", "description": "Stinking up the room"},
         {

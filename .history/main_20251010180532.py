@@ -3,35 +3,16 @@ import database_manager as dbHandler
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = "key"
+app.secret_key = "your-secret-key"  # required for sessions
 
-
+# Initialize database manager
 db = dbHandler.DBManager()
 
-
+# 🔧 Ensure messages table exists on startup
 db._create_messages_table()
 
 
-@app.context_processor
-def inject_notifications():
-    friends = [
-        {"id": 1, "name": "Rishit Prasad", "description": "Stinking up the room"},
-        {
-            "id": 2,
-            "name": "Sebastion Kameron",
-            "description": "Playing plague inc in class",
-        },
-        {"id": 3, "name": "David Koh", "description": "Working at mcdonalds"},
-    ]
-
-    current_time = datetime.now().strftime("%I:%M %p")
-
-    return dict(
-        friends=friends,
-        current_time=current_time,
-    )
-
-
+# 🏠 HOME PAGE
 @app.route("/", methods=["GET"])
 @app.route("/index.html", methods=["GET"])
 def index():
@@ -49,6 +30,7 @@ def index():
     return render_template("index.html", first_name=first_name, last_name=last_name)
 
 
+# 💬 CHAT PAGE
 @app.route("/chat", methods=["GET"])
 def chat():
     if "username" not in session:
@@ -58,6 +40,7 @@ def chat():
     return render_template("chat.html", messages=messages)
 
 
+# 📤 SEND MESSAGE
 @app.route("/send_message", methods=["POST"])
 def send_message():
     if "username" not in session:
@@ -72,7 +55,7 @@ def send_message():
 
 
 @app.route("/friends")
-def friends_page():
+def friends():
     if "username" not in session:
         return redirect("/Login")
     return render_template("friends.html")

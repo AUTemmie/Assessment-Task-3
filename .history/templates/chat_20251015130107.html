@@ -1,6 +1,6 @@
-You said: {% extends 'layout.html' %} {% block content %}
+{% extends 'layout.html' %} {% block content %}
 <div class="chat-container">
-  <h2>Chats</h2>
+  <h2>{{ chat_name.title() }} Chat</h2>
 
   <!-- Messages -->
   <div class="chat-box">
@@ -18,7 +18,11 @@ You said: {% extends 'layout.html' %} {% block content %}
   </div>
 
   <!-- Input -->
-  <form class="chat-input" method="post" action="{{ url_for('send_message') }}">
+  <form
+    class="chat-input"
+    method="post"
+    action="{{ url_for('chat', chat_name=chat_name) }}"
+  >
     <input
       type="text"
       name="message"
@@ -27,5 +31,7 @@ You said: {% extends 'layout.html' %} {% block content %}
     />
     <button type="submit">Send</button>
   </form>
+
+  <a href="{{ url_for('home') }}" class="back-link">← Back to chat list</a>
 </div>
 {% endblock %}

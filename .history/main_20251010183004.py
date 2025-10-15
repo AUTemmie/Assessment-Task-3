@@ -14,6 +14,7 @@ db._create_messages_table()
 
 @app.context_processor
 def inject_notifications():
+    # Example data; replace with database queries later
     friends = [
         {"id": 1, "name": "Rishit Prasad", "description": "Stinking up the room"},
         {
@@ -24,10 +25,22 @@ def inject_notifications():
         {"id": 3, "name": "David Koh", "description": "Working at mcdonalds"},
     ]
 
+    friend_requests = [
+        {"from_user": "Alice", "from_user_id": 6},
+        {"from_user": "Bob", "from_user_id": 7},
+    ]
+
+    messages = [
+        {"from_user": "Charlie", "message_text": "Hey, let's hang out!"},
+        {"from_user": "David", "message_text": "Check this out!"},
+    ]
+
     current_time = datetime.now().strftime("%I:%M %p")
 
     return dict(
         friends=friends,
+        friend_requests=friend_requests,
+        messages=messages,
         current_time=current_time,
     )
 

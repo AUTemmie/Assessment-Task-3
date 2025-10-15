@@ -1,0 +1,40 @@
+<aside class="notifications" aria-label="User Notifications">
+  <h2>Notifications</h2>
+  <ul class="notification-list">
+    <!-- Friends -->
+    {% for friend in friends %}
+    <li>
+      <span class="icon">👤</span>
+      <span class="text"
+        ><strong>{{ friend.name }}</strong>: {{ friend.description }}</span
+      >
+      <a href="{{ url_for('friends_page', user_id=friend.id) }}"
+        >View Profile</a
+      >
+    </li>
+    {% endfor %}
+
+    <!-- Friend Requests -->
+    {% for fr in friend_requests %}
+    <li>
+      <span class="icon">👤</span>
+      <span class="text">{{ fr.from_user }} sent you a friend request</span>
+      <a href="{{ url_for('friends_page', user_id=fr.from_user_id) }}"
+        >View Profile</a
+      >
+      <a href="{{ url_for('accept_friend', friend_id=fr.from_user_id) }}"
+        >Accept</a
+      >
+    </li>
+    {% endfor %}
+
+    <!-- Messages -->
+    {% for msg in messages %}
+    <li>
+      <span class="icon">💬</span>
+      <span class="text">{{ msg.from_user }}: {{ msg.message_text }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  <footer class="timestamp">Today {{ current_time }}</footer>
+</aside>

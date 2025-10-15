@@ -3,33 +3,9 @@ import database_manager as dbHandler
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = "key"
+app.secret_key = "your-secret-key"  # needed for sessions
 
-
-db = dbHandler.DBManager()
-
-
-db._create_messages_table()
-
-
-@app.context_processor
-def inject_notifications():
-    friends = [
-        {"id": 1, "name": "Rishit Prasad", "description": "Stinking up the room"},
-        {
-            "id": 2,
-            "name": "Sebastion Kameron",
-            "description": "Playing plague inc in class",
-        },
-        {"id": 3, "name": "David Koh", "description": "Working at mcdonalds"},
-    ]
-
-    current_time = datetime.now().strftime("%I:%M %p")
-
-    return dict(
-        friends=friends,
-        current_time=current_time,
-    )
+db = dbHandler.DBManager()  # create an instance
 
 
 @app.route("/", methods=["GET"])
@@ -39,40 +15,40 @@ def index():
         return redirect("/Login")
 
     user = db.get_user_by_first_name(session["username"])
-
-    if not user:
+    if not user:  # failsafe in case user not found
         return redirect("/Login")
 
     first_name = user["first_name"]
-    last_name = user.get("last_name", "")
+    last_name = user.get("last_name", "")  # optional
 
     return render_template("index.html", first_name=first_name, last_name=last_name)
 
 
-@app.route("/chat", methods=["GET"])
+# 🟩 CHAT PAGE (WITH DATABASE INTEGRATION)
+@app.route("/chat", methods=["GET", "POST"])
 def chat():
     if "username" not in session:
         return redirect("/Login")
 
-    messages = db.get_messages()
+    if request.method == "POST":
+        message_text = request.form["message"]
+        sender = session["username"]
+        time_str = datetime.now().strftime("%I:%M %p")
+        db.add_message(sender, message_text, time_str)
+        return redirect(url_for("chat"))
+
+    # Fetch and format messages
+    rows = db.get_messages()
+    messages = []
+    for sender, text, time in rows:
+        msg_type = "sent" if sender == session["username"] else "received"
+        messages.append({"text": text, "type": msg_type, "time": time})
+
     return render_template("chat.html", messages=messages)
 
 
-@app.route("/send_message", methods=["POST"])
-def send_message():
-    if "username" not in session:
-        return redirect("/Login")
-
-    sender = session["username"]
-    text = request.form["message"]
-    time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    db.add_message(sender, text, time)
-    return redirect(url_for("chat"))
-
-
 @app.route("/friends")
-def friends_page():
+def friends():
     if "username" not in session:
         return redirect("/Login")
     return render_template("friends.html")
@@ -99,7 +75,6 @@ def login():
         password = request.form["password"]
 
         user = db.get_user_by_first_name(username)
-
         if user:
             if password == user["password"]:
                 session["username"] = user["first_name"]
@@ -112,12 +87,6 @@ def login():
         return render_template("Login.html", error=error, hide_layout=True)
 
     return render_template("Login.html", hide_layout=True)
-
-
-@app.route("/logout")
-def logout():
-    session.pop("username", None)
-    return redirect("/Login")
 
 
 if __name__ == "__main__":
